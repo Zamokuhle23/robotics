@@ -1,7 +1,9 @@
 import numpy as np
 import cv2
+from cv2 import VideoWriter, VideoWriter_fourcc
 
 cap = cv2.VideoCapture(0)
+video = VideoWriter('webcam.mp4', VideoWriter_fourcc(*'MP42'), 25.0, (640, 480))
 
 while True:
     ret, frame = cap.read()
@@ -16,9 +18,11 @@ while True:
     image[height//2:, width//2:] = smaller_frame
 
     cv2.imshow('frame', image)
+    video.write(image)
 
     if cv2.waitKey(1) == ord('q'):
         break
 
 cap.release()
 cv2.destroyAllWindows()
+video.release()
