@@ -31,4 +31,5 @@ while True:
     cv2.namedWindow("input")
     cv2.setMouseCallback("input",click)
     cv2.imshow("input", image)
+    cv2.imwrite('warp.jpg', image)
     cv2.waitKey(1)
