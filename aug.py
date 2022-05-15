@@ -97,38 +97,7 @@ while cap.isOpened():
                                       [zoomLevel * cols, zoomLevel * rows],
                                       [zoomLevel * cols, -zoomLevel * rows]])
             print('Zoom out')
-        # if key == ord('n'):  # -> next image
-        #     if currentImage < len(images) - 1:
-        #         currentImage = currentImage + 1
-        #         replaceImg = cv2.imread(images[currentImage])
-        #         rows, cols, ch = replaceImg.shape
-        #         pts1 = np.float32([[0, 0], [0, rows], [(cols), (rows)], [cols, 0]])
-        #         pts1 = pts1 + np.float32([[-zoomLevel * cols, -zoomLevel * rows],
-        #                                   [-zoomLevel * cols, zoomLevel * rows],
-        #                                   [zoomLevel * cols, zoomLevel * rows],
-        #                                   [zoomLevel * cols, -zoomLevel * rows]])
-        #         print('Next image')
-        #     else:
-        #         print('No more images on the right')
-        # if key == ord('m'):  # <- previous image
-        #     if currentImage > 0:
-        #         currentImage = currentImage - 1
-        #         replaceImg = cv2.imread(images[currentImage])
-        #         rows, cols, ch = replaceImg.shape
-        #         pts1 = np.float32([[0, 0], [0, rows], [(cols), (rows)], [cols, 0]])
-        #         pts1 = pts1 + np.float32([[-zoomLevel * cols, -zoomLevel * rows],
-        #                                   [-zoomLevel * cols, zoomLevel * rows],
-        #                                   [zoomLevel * cols, zoomLevel * rows],
-        #                                   [zoomLevel * cols, -zoomLevel * rows]])
-        #         print('Previous image')
-        #     else:
-        #         print('No more images on the left')
-        # else:
-        #     print("We are doomed")
+
 cap.release()
 cv2.destroyAllWindows()
 # KILL ME
-
-# Using the open cv library, we first set  our chosen image and detect unique points on the image. Next the program
-# Matches these points to whatever is captured on your computer's video frame. If the unique points are detected,
-# the program will overlay an image of your choice at the exact coordinates

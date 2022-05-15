@@ -5,7 +5,7 @@ import random
 import cv2 as cv
 import numpy as np
 
-<<<<<<< HEAD
+
 
 alpha_slider_max = 90
 title_window = 'Linear Blend'
@@ -13,17 +13,17 @@ title_window = 'Linear Blend'
 
 def nothing(x):
     print(x)
-=======
+
 alpha_slider_max = 90
 title_window = 'Salt and Paper'
->>>>>>> origin/main
+
 
 src1 = cv.imread('boss.jpg', cv2.COLOR_BGR2RGB)
 src2 = cv.imread('boss.jpg', cv2.COLOR_BGR2RGB)
 
 extracted_color_img = np.zeros((100, 100, 3), np.uint8)
 rgb = [0, 0, 0]
-<<<<<<< HEAD
+
 percentage = 0.1
 p = 0.1
 output = np.zeros(src1.shape, np.uint8)
@@ -54,7 +54,7 @@ def on_trackbar(val):
     #percentage = cv.getTrackbarPos(trackbar_name, title_window)
 
     #print(percentage)
-=======
+
 percentage = 0.5
 output = np.zeros(src1.shape, np.uint8)
 
@@ -93,16 +93,16 @@ def salt():
                 output[i][j] = src1[i][j]
 
     print(percentage)
->>>>>>> origin/main
+
 
 
 cv.namedWindow(title_window)
 trackbar_name = 'V 0'
-<<<<<<< HEAD
+
 cv.createTrackbar(trackbar_name, title_window, int(percentage*100), alpha_slider_max, on_trackbar)
-=======
+
 cv.createTrackbar(trackbar_name, title_window, 10, alpha_slider_max, on_trackbar)
->>>>>>> origin/main
+
 on_trackbar(10)
 # Wait until user press some key
 cv.waitKey()
